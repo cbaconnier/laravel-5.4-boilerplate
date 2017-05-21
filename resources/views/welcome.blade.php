@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
         <!-- Styles -->
         <style>
             html, body {
@@ -63,6 +63,9 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <link rel="stylesheet" href="{{ mix('/css/vendor.css') }}">
+        <link rel="stylesheet" href="{{ mix('/css/main.css') }}">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -83,13 +86,21 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laravel.com/docs"> <i class="alarm outline icon"></i> Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                <div id="app">
+                    <example></example>
+                </div>
             </div>
         </div>
     </body>
+
+    <script src="{{ mix("/js/vendor.js") }}"></script>
+    <script src="{{ mix("/js/main.js") }}"></script>
+
 </html>
