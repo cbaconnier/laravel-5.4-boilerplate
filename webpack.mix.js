@@ -23,7 +23,32 @@ module.exports = {
 
 
 mix
-    .js(['resources/assets/js/vendor/app.js', 'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui.js'], 'public/js/vendor.js')
+    .js(['resources/assets/js/vendor/app.js',
+        //'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/api.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/colorize.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/form.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/state.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/visibility.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/visit.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/site.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/accordion.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/checkbox.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/dimmer.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/dropdown.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/embed.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/modal.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/nag.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/popup.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/progress.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/rating.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/search.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/shape.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/sidebar.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/sticky.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/tab.js',
+        'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/transition.js',
+    ], 'public/js/vendor.js')
     .js('resources/assets/js/main.js', 'public/js/main.js')
     .sass('resources/assets/sass/vendor/vendor.scss', 'public/css')
     .sass('resources/assets/sass/main.scss', 'public/css')

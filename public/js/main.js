@@ -63,12 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 42);
+/******/ 	return __webpack_require__(__webpack_require__.s = 64);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 31:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,14 +98,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 37:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(38)(
+var Component = __webpack_require__(60)(
   /* script */
-  __webpack_require__(31),
+  __webpack_require__(53),
   /* template */
-  __webpack_require__(39),
+  __webpack_require__(61),
   /* scopeId */
   null,
   /* cssModules */
@@ -133,7 +133,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 38:
+/***/ 60:
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -191,7 +191,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 39:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -221,7 +221,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 42:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(8);
@@ -232,7 +232,7 @@ module.exports = __webpack_require__(8);
 /***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
-Vue.component('example', __webpack_require__(37));
+Vue.component('example', __webpack_require__(59));
 
 var app = new Vue({
     el: '#app'
