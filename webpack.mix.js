@@ -30,7 +30,7 @@ mix
     .webpackConfig({
         plugins: [
             new BrowserSyncPlugin({
-                open: 'local',
+                open: process.env.WEBPACK_PROXY,
                 proxy: process.env.WEBPACK_PROXY,
                 files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php']
             })
