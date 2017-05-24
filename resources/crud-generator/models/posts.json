@@ -38,7 +38,7 @@
     {
       "name": "user",
       "type": "belongsTo",
-      "class": "App\\User"
+      "class": "App\\Models\\User"
     }
   ],
   "validations": [
