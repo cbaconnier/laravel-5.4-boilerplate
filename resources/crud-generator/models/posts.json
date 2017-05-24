@@ -1,0 +1,54 @@
+{
+  "fields": [
+    {
+      "name": "title",
+      "type": "string"
+    },
+    {
+      "name": "content",
+      "type": "text"
+    },
+    {
+      "name": "category",
+      "type": "select",
+      "options": ["technology", "tips", "health"]
+    },
+    {
+      "name": "is_activated",
+      "type": "boolean"
+    },
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "publicated_at",
+      "type": "date"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users",
+      "onDelete": "cascade"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\User"
+    }
+  ],
+  "validations": [
+    {
+      "field": "title",
+      "rules": "required|max:10"
+    },
+    {
+      "field": "date",
+      "rules": "required|date|date_format:d.m.Y"
+    }
+  ]
+}
