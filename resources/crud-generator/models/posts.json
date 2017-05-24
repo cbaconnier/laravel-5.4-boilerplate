@@ -47,8 +47,8 @@
       "rules": "required|max:10"
     },
     {
-      "field": "date",
-      "rules": "required|date|date_format:d.m.Y"
+      "field": "publicated_at",
+      "rules": "required|date|date_format:Y-m-d"
     }
   ]
 }
