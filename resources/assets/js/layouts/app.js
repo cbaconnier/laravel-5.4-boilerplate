@@ -25,7 +25,10 @@ $(function () {
         .dropdown({context: '#app'});
 
     $('.ui.accordion')
-        .accordion({context: '#app'})
+        .accordion({context: '#app'});
+
+    $('.ui.checkbox')
+        .checkbox({context: '#app'})
     ;
 
 

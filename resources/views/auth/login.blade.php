@@ -1,68 +1,80 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
+    <div class="auth-login">
+        <div class="ui middle aligned center aligned grid">
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+            <div class="column">
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
+                <h2 class="ui header">
+                    <div class="content">
+                        Log-in to your account
+                    </div>
+                </h2>
+
+                <form class="ui form" role="form" method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
+
+                    <div class="ui stacked segment left aligned">
+
+                        {{-- Email --}}
+                        <div class="field">
+                            <div class="ui left icon {{ $errors->has('email') ? ' error' : '' }} input">
+                                <i class="user icon"></i>
+                                <input type="text" name="email" placeholder="E-mail address" value="{{ old('email') }}">
                             </div>
+                            @if ($errors->has('email'))
+                                <div class="ui basic red pointing prompt label transition visible">{{ $errors->first('email') }}</div>
+                            @endif
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
+                        {{-- Password --}}
+                        <div class="field">
+                            <div class="ui left icon {{ $errors->has('password') ? ' error' : '' }} input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="Password">
                             </div>
+                            @if ($errors->has('password'))
+                                <div class="ui basic red pointing prompt label transition visible">{{ $errors->first('password') }}</div>
+                            @endif
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
+
+                        {{-- Remember --}}
+                        <div class="field">
+                            <div class="ui left checkbox">
+                                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <label>Remember Me</label>
                             </div>
+
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
+                        {{-- Submit --}}
+                        <div class="field">
+                            <button type="submit" class="ui fluid large submit button">Login</button>
                         </div>
-                    </form>
-                </div>
+
+                        {{-- Password forgot --}}
+                        <div class="field">
+                            <a class="ui mini floated compact message" href="{{ route('password.request') }}">
+                                Forgot Your Password?
+                            </a>
+                        </div>
+
+                    </div>
+
+                </form>
+
+                {{-- Signup --}}
+                <a href="{{ url('/register')}}">
+                    <div class="ui message">
+                        New to us? Sign Up
+                    </div>
+                </a>
+
+
             </div>
         </div>
     </div>
-</div>
 @endsection
