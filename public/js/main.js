@@ -68,71 +68,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ 53:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
-
-/***/ }),
-
-/***/ 59:
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(60)(
-  /* script */
-  __webpack_require__(53),
-  /* template */
-  __webpack_require__(61),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "E:\\My Data\\Projets\\Laravel\\laravel-5.4-boilerplate\\resources\\assets\\js\\components\\Example.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1b5f80df", Component.options)
-  } else {
-    hotAPI.reload("data-v-1b5f80df", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
 /***/ 60:
 /***/ (function(module, exports) {
 
@@ -191,7 +126,125 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 61:
+/***/ 64:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8);
+
+
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+// This file is build as main.js
+
+// Do not include vendor folder. It's already build as vendor.js by webpack
+__webpack_require__(80);
+__webpack_require__(81);
+
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, exports) {
+
+$(function () {
+
+    // fix menu when passed
+    $('.menu-top').visibility({
+        context: '#app',
+        once: false,
+        onBottomPassed: function onBottomPassed() {
+            $('.fixed.menu').transition('fade in');
+        },
+        onBottomPassedReverse: function onBottomPassedReverse() {
+            $('.fixed.menu').transition('fade out');
+        }
+    });
+
+    // create sidebar and attach to menu open
+    $('.ui.sidebar').sidebar({ context: '#app' }).sidebar('attach events', '.burger.item').sidebar('setting', 'transition', 'overlay');
+});
+
+/***/ }),
+
+/***/ 81:
+/***/ (function(module, exports, __webpack_require__) {
+
+Vue.component('example', __webpack_require__(82));
+
+var app = new Vue({
+    el: '#app'
+});
+
+/***/ }),
+
+/***/ 82:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(60)(
+  /* script */
+  __webpack_require__(79),
+  /* template */
+  __webpack_require__(83),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "E:\\My Data\\Projets\\Laravel\\laravel-5.4-boilerplate\\resources\\assets\\js\\vuejs\\components\\Example.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Example.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-ac56c5c2", Component.options)
+  } else {
+    hotAPI.reload("data-v-ac56c5c2", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 83:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -215,28 +268,9 @@ module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1b5f80df", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-ac56c5c2", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 64:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(8);
-
-
-/***/ }),
-
-/***/ 8:
-/***/ (function(module, exports, __webpack_require__) {
-
-Vue.component('example', __webpack_require__(59));
-
-var app = new Vue({
-    el: '#app'
-});
 
 /***/ })
 

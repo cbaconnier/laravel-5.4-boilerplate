@@ -1,5 +1,51 @@
 @import 'layouts/all';
 
-body {
-  padding: 0em;
+.ui {
+
+  &.vertical {
+    &.stripe {
+      padding: 8em 0em;
+
+      h3 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1.33em;
+      }
+
+      .horizontal {
+        &.divider {
+          margin: 3em 0em;
+        }
+      }
+
+      .floated {
+        &.image {
+          clear: both;
+        }
+      }
+
+    }
+  }
+
 }
+
+.quote {
+
+  &.stripe {
+    &.segment {
+      padding: 0em;
+
+      .grid {
+        .column {
+          padding-top: 5em;
+          padding-bottom: 5em;
+        }
+      }
+
+    }
+  }
+
+}
+

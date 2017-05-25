@@ -1,6 +1,6 @@
-Vue.component('example', require('./components/Example.vue'));
+// This file is build as main.js
 
-const app = new Vue({
-    el: '#app'
-});
+// Do not include vendor folder. It's already build as vendor.js by webpack
+require('./layouts/app');
+require('./vuejs/vue');
 
