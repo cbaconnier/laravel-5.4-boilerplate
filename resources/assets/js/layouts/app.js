@@ -21,5 +21,12 @@ $(function () {
         .sidebar('setting', 'transition', 'overlay')
     ;
 
+    $('.ui.dropdown')
+        .dropdown({context: '#app'});
+
+    $('.ui.accordion')
+        .accordion({context: '#app'})
+    ;
+
 
 });

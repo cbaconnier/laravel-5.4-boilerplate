@@ -195,6 +195,10 @@ $(function () {
 
     // create sidebar and attach to menu open
     $('.ui.sidebar').sidebar({ context: '#app' }).sidebar('attach events', '.burger.item').sidebar('setting', 'transition', 'overlay');
+
+    $('.ui.dropdown').dropdown({ context: '#app' });
+
+    $('.ui.accordion').accordion({ context: '#app' });
 });
 
 /***/ }),
