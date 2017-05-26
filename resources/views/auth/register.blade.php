@@ -32,7 +32,7 @@
                         {{-- Email --}}
                         <div class="field">
                             <div class="ui left icon {{ $errors->has('email') ? ' error' : '' }} input">
-                                <i class="user icon"></i>
+                                <i class="mail icon"></i>
                                 <input type="text" name="email" placeholder="E-mail address" value="{{ old('email') }}">
                             </div>
                             @if ($errors->has('email'))
