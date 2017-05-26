@@ -1,5 +1,5 @@
 <div class="menu-fixed">
-    <div class="ui small top fixed hidden menu">
+    <div class="ui small top secondary pointing fixed hidden menu">
         <div class="ui container">
             <a class="active item">Home</a>
             <a class="item">Work</a>
@@ -7,8 +7,12 @@
             <a class="item">Careers</a>
             <div class="right menu">
                 @if (!Auth::check())
-                    <a href="{{ url('/login') }}" class="ui button">Login</a>
-                    <a href="{{ url('/register')}}" class="ui button">Register</a>
+                    <div class="item">
+                        <a href="{{ url('/login') }}" class="ui basic button">Login</a>
+                    </div>
+                    <div class="item">
+                        <a href="{{ url('/register')}}" class="ui basic button">Register</a>
+                    </div>
                 @else
 
                     <div class="ui dropdown item">
