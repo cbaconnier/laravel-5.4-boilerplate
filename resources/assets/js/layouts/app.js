@@ -11,15 +11,13 @@ $(function () {
             onBottomPassedReverse: function () {
                 $('.fixed.menu').transition('fade out');
             }
-        })
-    ;
+        });
 
 // create sidebar and attach to menu open
     $('.ui.sidebar')
         .sidebar({context: '#app'})
         .sidebar('attach events', '.burger.item')
-        .sidebar('setting', 'transition', 'overlay')
-    ;
+        .sidebar('setting', 'transition', 'overlay');
 
     $('.ui.dropdown')
         .dropdown({context: '#app'});
@@ -28,8 +26,6 @@ $(function () {
         .accordion({context: '#app'});
 
     $('.ui.checkbox')
-        .checkbox({context: '#app'})
-    ;
-
+        .checkbox({context: '#app'});
 
 });
