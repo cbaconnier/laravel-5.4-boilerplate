@@ -13,10 +13,16 @@
                     </div>
                 </h2>
 
-                <form class="ui form" role="form" method="POST" action="{{ route('register') }}">
+                <form class="ui form" role="form" method="POST"
+                      action="{{ isset($token)? route('invite.register') : route('register') }}">
+
                     {{ csrf_field() }}
 
                     <div class="ui stacked segment left aligned">
+
+                        @if(isset($token))
+                            {{ Form::hidden('token', $token) }}
+                        @endif
 
                         {{-- Name --}}
                         <div class="field">
