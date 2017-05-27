@@ -18,6 +18,8 @@ class InviteController extends Controller
         return view('admin.invite.create');
     }
 
+
+    //todo: request
     public function process(Request $request)
     {
         // generate a unique token
