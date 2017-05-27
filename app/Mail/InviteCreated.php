@@ -4,9 +4,12 @@ namespace App\Mail;
 
 use App\App\Models\Invite;
 use Illuminate\Bus\Queueable;
+use Illuminate\Container\Container;
+use Illuminate\Contracts\Mail\Mailer as MailerContract;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Snowfire\Beautymail\Beautymail;
 
 class InviteCreated extends Mailable
 {
@@ -32,7 +35,32 @@ class InviteCreated extends Mailable
     public function build()
     {
         $invite = $this->invite;
-        return $this->from('you@example.com')
-            ->view('emails.invite' , compact('invite'));
+        return $this
+            ->subject('Register now')
+            ->from('you@example.com')
+            ->view('emails.invite' , compact('invite'))
+            ;
     }
+
+    /**
+     * Send the message using the given mailer.
+     *
+     * @param  \Illuminate\Contracts\Mail\Mailer  $mailer
+     * @return void
+     */
+    public function send(MailerContract $mailer)
+    {
+        Container::getInstance()->call([$this, 'build']);
+
+        $beautymail = app()->make(Beautymail::class);
+
+        $beautymail->send($this->buildView(), $this->buildViewData(), function ($message) {
+            $this->buildFrom($message)
+                ->buildRecipients($message)
+                ->buildSubject($message)
+                ->buildAttachments($message)
+                ->runCallbacks($message);
+        });
+    }
+
 }

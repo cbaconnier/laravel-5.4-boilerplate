@@ -181,6 +181,8 @@ return [
         Laratrust\LaratrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
+        Snowfire\Beautymail\BeautymailServiceProvider::class,
+
     ],
 
     /*
