@@ -14,7 +14,7 @@
 - add deployment files configuration
 
 
-###  What's in?
+###  What's in it?
 
 #### Front-end
 
