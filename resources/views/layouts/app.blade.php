@@ -43,6 +43,8 @@
         @include('layouts.partials.menu.footer')
     </div>
 
+</div>
+
     {{--Scripts--}}
     <script src="{{ mix("/js/vendor.js") }}"></script>
     <script src="{{ mix("/js/main.js") }}"></script>
