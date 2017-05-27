@@ -26,27 +26,26 @@
     @include('layouts.partials.menu.sidebar')
 
 
-    {{-- Page Contents --}}
     <div class="pusher">
-        <div class="ui vertical center aligned segment">
-
+        <div class="ui container">
             {{-- Menu header --}}
-            <div class="ui container">
-                @include('layouts.partials.menu.top')
-            </div>
+            @include('layouts.partials.menu.top')
 
+
+
+            {{-- Page Contents --}}
             @yield('content')
 
-            {{-- Footer --}}
-            @include('layouts.partials.menu.footer')
-
         </div>
-    </div>
-</div>
 
-{{--Scripts--}}
-<script src="{{ mix("/js/vendor.js") }}"></script>
-<script src="{{ mix("/js/main.js") }}"></script>
+
+        {{-- Footer --}}
+        @include('layouts.partials.menu.footer')
+    </div>
+
+    {{--Scripts--}}
+    <script src="{{ mix("/js/vendor.js") }}"></script>
+    <script src="{{ mix("/js/main.js") }}"></script>
 @yield('scripts')
 
 </body>

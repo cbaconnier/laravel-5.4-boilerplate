@@ -1,52 +1,10 @@
+@import 'variables';
 @import 'layouts/all';
 @import 'auth/all';
+@import 'admin/all';
 
-.ui {
-
-  &.vertical {
-    &.stripe {
-      padding: 8em 0em;
-
-      h3 {
-        font-size: 2em;
-      }
-
-      p {
-        font-size: 1.33em;
-      }
-
-      .horizontal {
-        &.divider {
-          margin: 3em 0em;
-        }
-      }
-
-      .floated {
-        &.image {
-          clear: both;
-        }
-      }
-
-    }
+.ui{
+  .segment:last-child {
+    margin-bottom: $spacing;
   }
-
 }
-
-.quote {
-
-  &.stripe {
-    &.segment {
-      padding: 0em;
-
-      .grid {
-        .column {
-          padding-top: 5em;
-          padding-bottom: 5em;
-        }
-      }
-
-    }
-  }
-
-}
-

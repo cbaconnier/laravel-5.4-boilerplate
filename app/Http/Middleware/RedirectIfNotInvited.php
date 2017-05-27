@@ -21,16 +21,14 @@ class RedirectIfNotInvited
             return redirect('/home');
         }
 
-        // Look up the invite exist
+        // Look up if the invite exist
         if (!$invite = Invite::where('token', $token)->first()) {
-            // todo: make an error page
-            abort(404);
+            abort(404, "This token doesn't exist.");
         }
 
         // Look up if the invite is already accepted
         if($invite->claimed_at){
-            // todo: make an error page
-            abort(404);
+            abort(404, "You've already claimed this token.");
         }
 
         return $next($request);

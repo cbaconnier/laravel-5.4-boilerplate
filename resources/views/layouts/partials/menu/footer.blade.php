@@ -1,6 +1,6 @@
 <div class="menu-footer">
     <div class="ui inverted vertical footer segment">
-        <div class="ui container">
+        <div class="ui center aligned container">
             <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="three wide column">
                     <h4 class="ui inverted header">About</h4>
@@ -27,5 +27,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>
