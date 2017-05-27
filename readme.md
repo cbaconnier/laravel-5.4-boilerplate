@@ -27,7 +27,10 @@
 
 - Laravel Authentication
 - An Invitation based registration
-
+- Snowfire/Beautymail
+- barryvdh/laravel-ide-helper
+- barryvdh/laravel-debugbar
+- appzcoder/crud-generator
 
 ### Getting started
 
