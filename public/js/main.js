@@ -63,12 +63,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 67);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
-/******/ ({
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 53:
+// This file is build as main.js
+
+
+// Do not include vendor folder. It's already build as vendor.js by webpack
+__webpack_require__(4);
+__webpack_require__(5);
+
+__webpack_require__(3);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88,8 +106,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-
-/***/ 54:
+/* 3 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -109,8 +126,7 @@ $(function () {
 });
 
 /***/ }),
-
-/***/ 55:
+/* 4 */
 /***/ (function(module, exports) {
 
 $(function () {
@@ -138,26 +154,24 @@ $(function () {
 });
 
 /***/ }),
-
-/***/ 57:
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-Vue.component('example', __webpack_require__(62));
+Vue.component('example', __webpack_require__(6));
 
 var app = new Vue({
     el: '#app'
 });
 
 /***/ }),
-
-/***/ 62:
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(63)(
+var Component = __webpack_require__(7)(
   /* script */
-  __webpack_require__(53),
+  __webpack_require__(2),
   /* template */
-  __webpack_require__(64),
+  __webpack_require__(8),
   /* scopeId */
   null,
   /* cssModules */
@@ -184,8 +198,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-
-/***/ 63:
+/* 7 */
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -242,8 +255,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-
-/***/ 64:
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -264,27 +276,12 @@ if (false) {
 }
 
 /***/ }),
-
-/***/ 67:
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(8);
+__webpack_require__(0);
+module.exports = __webpack_require__(1);
 
-
-/***/ }),
-
-/***/ 8:
-/***/ (function(module, exports, __webpack_require__) {
-
-// This file is build as main.js
-
-
-// Do not include vendor folder. It's already build as vendor.js by webpack
-__webpack_require__(55);
-__webpack_require__(57);
-
-__webpack_require__(54);
 
 /***/ })
-
-/******/ });
+/******/ ]);
