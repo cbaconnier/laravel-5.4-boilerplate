@@ -1,9 +1,8 @@
-@extends('layouts.app')
+@extends('admin.layouts.dashboard')
 
-@section('content')
+@section('dashboard')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
             <div class="col-md-9">
                 <div class="panel panel-default">
