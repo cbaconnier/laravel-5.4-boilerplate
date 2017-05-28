@@ -8,11 +8,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">%%crudNameCap%%</div>
                     <div class="panel-body">
-                        <a href="{{ url('/%%routeGroup%%%%viewName%%/create') }}" class="btn btn-success btn-sm" title="Add New %%modelName%%">
+                        <a href="{{ route('%%routePrefix%%.%%viewName%%.create') }}" class="btn btn-success btn-sm" title="Add New %%modelName%%">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
 
-                        {!! Form::open(['method' => 'GET', 'url' => '/%%routeGroup%%%%viewName%%', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
+                        {!! Form::open(['method' => 'GET', 'route' => '%%routePrefix%%.%%viewName%%.index', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Search...">
                             <span class="input-group-btn">
@@ -38,11 +38,11 @@
                                         <td>{{ $item->id }}</td>
                                         %%formBodyHtml%%
                                         <td>
-                                            <a href="{{ url('/%%routeGroup%%%%viewName%%/' . $item->%%primaryKey%%) }}" title="View %%modelName%%"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/%%routeGroup%%%%viewName%%/' . $item->%%primaryKey%% . '/edit') }}" title="Edit %%modelName%%"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ route('%%routePrefix%%.%%viewName%%.show' , ['id' => $item->%%primaryKey%%] ) }}" title="View %%modelName%%"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ route('%%routePrefix%%.%%viewName%%.edit' , ['id' => $item->%%primaryKey%%] ) }}" title="Edit %%modelName%%"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                             {!! Form::open([
                                                 'method'=>'DELETE',
-                                                'url' => ['/%%routeGroup%%%%viewName%%', $item->%%primaryKey%%],
+                                                'route' => ['%%routePrefix%%.%%viewName%%.destroy', $item->%%primaryKey%%],
                                                 'style' => 'display:inline'
                                             ]) !!}
                                                 {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
