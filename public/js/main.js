@@ -129,6 +129,8 @@ $(function () {
     $('.ui.accordion').accordion({ context: '#app' });
 
     $('.ui.checkbox').checkbox({ context: '#app' });
+
+    $('form').form();
 });
 
 /***/ }),

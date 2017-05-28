@@ -28,4 +28,6 @@ $(function () {
     $('.ui.checkbox')
         .checkbox({context: '#app'});
 
+    $('form').form();
+
 });

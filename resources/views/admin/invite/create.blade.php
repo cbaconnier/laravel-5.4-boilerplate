@@ -14,9 +14,9 @@
             <div class="ui fluid form segment">
                 <div class="inline field">
                     <div class="field">
-                        <div class="ui action fluid input">
+                        <div class="ui fluid action input">
                             {{ Form::text('email', old('email')) }}
-                            {{ Form::button('Submit', ['class' => 'ui blue submit button']) }}
+                            <div class="ui submit button">Submit</div>
                         </div>
                     </div>
                 </div>
