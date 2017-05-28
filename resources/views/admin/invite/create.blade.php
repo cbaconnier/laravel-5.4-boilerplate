@@ -8,7 +8,7 @@
             <p>Invite a user to register in your website</p>
 
 
-            {{ Form::open([ 'route' => 'invite.process', 'method' => 'post']) }}
+            {{ Form::open([ 'route' => 'admin.invite.process', 'method' => 'post']) }}
             {{ csrf_field() }}
 
             <div class="ui fluid form segment">
