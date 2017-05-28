@@ -35,7 +35,7 @@ class InviteController extends RegisterController
         event(new Registered($user = $this->create($request->all())));
         $this->guard()->login($user);
 
-        $invite->claimed();
+        $invite->claim();
 
         return $this->registered($request, $user)
             ?: redirect($this->redirectPath());
