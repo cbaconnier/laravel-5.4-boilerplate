@@ -41,9 +41,29 @@
     $ php artisan migrate
     $ php artisan serve
 
-##### webpack
+##### Webpack
 
     $ npm install
     $ npm run build
     $ npm run watch
 
+##### CRUD-generator
+
+    $ php artisan crud:generate Posts --fields_from_file="resources/crud-generator/models/posts.json" --view-path=admin --controller-namespace=Admin --route-group=admin --model-namespac e="Models"
+
+Then in `routes/web.php` rename and move|wrap the generated route
+
+from
+
+    Route::resource('admin/posts', 'Admin\\PostsController');
+
+To
+
+    Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
+
+        // Others routes
+        // [...]
+
+        Route::resource('posts', 'PostsController');
+
+    });
