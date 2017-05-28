@@ -15,7 +15,7 @@ $(function () {
 
 // create sidebar and attach to menu open
     $('.ui.sidebar')
-        .sidebar({context: '#app'})
+        .sidebar({context: '#app', exclusive: true})
         .sidebar('attach events', '.burger.item')
         .sidebar('setting', 'transition', 'overlay');
 

@@ -1,28 +1,28 @@
-@extends('layouts.app')
+@extends('admin.layouts.dashboard')
 
-@section('content')
+@section('dashboard')
     <div class="admin-invite-create">
         <div class="ui basic segment">
 
-            <form action="{{ route('invite.process') }}" method="post">
+            <h4 class="ui header">Send an invitation</h4>
+            <p>Invite a user to register in your website</p>
 
-                {{ csrf_field() }}
-                <h4 class="ui header">Send an invitation</h4>
-                <p>Invite a user to register in your website</p>
 
-                <div class="ui fluid form segment">
-                    <div class="inline field">
-                        <div class="field">
-                            <div class="ui action input">
-                                <input type="email" name="email" placeholder="Email"/>
-                                <button type="submit" class="ui blue submit button">Submit</button>
-                            </div>
+            {{ Form::open([ 'route' => 'invite.process', 'method' => 'post']) }}
+            {{ csrf_field() }}
+
+            <div class="ui fluid form segment">
+                <div class="inline field">
+                    <div class="field">
+                        <div class="ui action fluid input">
+                            {{ Form::text('email', old('email')) }}
+                            {{ Form::button('Submit', ['class' => 'ui blue submit button']) }}
                         </div>
-
                     </div>
                 </div>
+            </div>
 
-            </form>
+            {{ Form::close() }}
 
         </div>
     </div>
