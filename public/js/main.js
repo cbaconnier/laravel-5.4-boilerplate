@@ -77,6 +77,8 @@
 __webpack_require__(3);
 __webpack_require__(4);
 
+__webpack_require__(12);
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
@@ -129,8 +131,6 @@ $(function () {
     $('.ui.accordion').accordion({ context: '#app' });
 
     $('.ui.checkbox').checkbox({ context: '#app' });
-
-    $('form').form();
 });
 
 /***/ }),
@@ -262,6 +262,29 @@ if (false) {
 __webpack_require__(0);
 module.exports = __webpack_require__(1);
 
+
+/***/ }),
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
+/***/ (function(module, exports) {
+
+$(function () {
+
+    $('.admin-invite-create form').form({
+        on: 'blur',
+        fields: {
+            email: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: 'Please enter a valid e-mail'
+                }]
+            }
+        }
+    });
+});
 
 /***/ })
 /******/ ]);
