@@ -63,30 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 67);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/******/ ({
 
-// This file is build as main.js
-
-
-// Do not include vendor folder. It's already build as vendor.js by webpack
-__webpack_require__(3);
-__webpack_require__(4);
-
-__webpack_require__(12);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,7 +88,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 3 */
+
+/***/ 54:
+/***/ (function(module, exports) {
+
+$(function () {
+
+    $('.admin-invite-create form').form({
+        on: 'blur',
+        fields: {
+            email: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: 'Please enter a valid e-mail'
+                }]
+            }
+        }
+    });
+});
+
+/***/ }),
+
+/***/ 55:
 /***/ (function(module, exports) {
 
 $(function () {
@@ -134,24 +138,26 @@ $(function () {
 });
 
 /***/ }),
-/* 4 */
+
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
-Vue.component('example', __webpack_require__(5));
+Vue.component('example', __webpack_require__(62));
 
 var app = new Vue({
     el: '#app'
 });
 
 /***/ }),
-/* 5 */
+
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(6)(
+var Component = __webpack_require__(63)(
   /* script */
-  __webpack_require__(2),
+  __webpack_require__(53),
   /* template */
-  __webpack_require__(7),
+  __webpack_require__(64),
   /* scopeId */
   null,
   /* cssModules */
@@ -178,7 +184,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 6 */
+
+/***/ 63:
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -235,7 +242,8 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 7 */
+
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -256,35 +264,27 @@ if (false) {
 }
 
 /***/ }),
-/* 8 */
+
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(0);
-module.exports = __webpack_require__(1);
+module.exports = __webpack_require__(8);
 
 
 /***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
-/***/ (function(module, exports) {
 
-$(function () {
+/***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
 
-    $('.admin-invite-create form').form({
-        on: 'blur',
-        fields: {
-            email: {
-                identifier: 'email',
-                rules: [{
-                    type: 'email',
-                    prompt: 'Please enter a valid e-mail'
-                }]
-            }
-        }
-    });
-});
+// This file is build as main.js
+
+
+// Do not include vendor folder. It's already build as vendor.js by webpack
+__webpack_require__(55);
+__webpack_require__(57);
+
+__webpack_require__(54);
 
 /***/ })
-/******/ ]);
+
+/******/ });
