@@ -20,7 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 //todo: 'middleware' => 'auth.admin',
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
     Route::get('invite/create', 'InviteController@create')->name('invite.create');
     Route::post('invite/process', 'InviteController@process')->name('invite.process');
 });
