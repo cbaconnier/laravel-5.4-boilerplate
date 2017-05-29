@@ -6,7 +6,7 @@
     <div class="ui basic segment">
         <div class="ui stackable grid">
 
-            <div class="four wide column">
+            <div class="four wide column sidebar-wrapper">
                 @include('admin.layouts.partials.sidebar')
             </div>
 

@@ -1,13 +1,31 @@
-.admin-sidebar {
+.sidebar-wrapper {
 
-  @media only screen and (min-width: 700px) {
-    .secondary.pointing.menu {
-      .item {
-        padding-left: 0px;
+  position: relative;
+  margin-bottom: $spacing * 2;
+
+
+
+  .admin-sidebar {
+
+    @media only screen and (min-width: 768px) {
+
+      .ui.menu.fluid, .ui.vertical.menu.fluid {
+        width: 90% !important; /* 251.75 */
+      }
+
+      .admin-sidebar-menu{
+        position: absolute;
+        height: 100%;
+
+        .secondary.pointing.menu {
+          .item {
+            padding-left: 0px;
+          }
+        }
+
       }
 
     }
-
   }
 
 }
