@@ -1,45 +1,56 @@
 @extends('admin.layouts.dashboard')
 
 @section('dashboard')
-    <div class="container">
-        <div class="row">
 
-            <div class="col-md-9">
-                <div class="panel panel-default">
-                    <div class="panel-heading">%%modelName%% {{ $%%crudNameSingular%%->%%primaryKey%% }}</div>
-                    <div class="panel-body">
 
-                        <a href="{{ route('%%routePrefix%%.%%viewName%%.index') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
-                        <a href="{{ route('%%routePrefix%%.%%viewName%%.edit',['id' => $%%crudNameSingular%%->%%primaryKey%% ]) }}" title="Edit %%modelName%%"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                        {!! Form::open([
-                            'method'=>'DELETE',
-                            'route' => ['%%routePrefix%%.%%viewName%%.destroy', $%%crudNameSingular%%->%%primaryKey%%],
-                            'style' => 'display:inline'
-                        ]) !!}
-                            {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
-                                    'type' => 'submit',
-                                    'class' => 'btn btn-danger btn-xs',
-                                    'title' => 'Delete %%modelName%%',
-                                    'onclick'=>'return confirm("Confirm delete?")'
-                            ))!!}
-                        {!! Form::close() !!}
-                        <br/>
-                        <br/>
 
-                        <div class="table-responsive">
-                            <table class="table table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $%%crudNameSingular%%->%%primaryKey%% }}</td>
-                                    </tr>
-                                    %%formBodyHtmlForShowView%%
-                                </tbody>
-                            </table>
-                        </div>
+    <div class="ui basic segment">
+        <h1 class="ui header">%%modelName%% {{ $%%crudNameSingular%%->%%primaryKey%% }}</h1>
 
-                    </div>
-                </div>
-            </div>
+
+        <div class="ui buttons">
+            <a href="{{  route('%%routePrefix%%.%%viewName%%.index') }}"
+               class="ui button"
+               title="Back">
+                <i class="arrow left icon"></i>
+                </button>
+            </a>
+            <a href="{{ route('%%routePrefix%%.%%viewName%%.edit' , ['id' => $%%crudNameSingular%%->%%primaryKey%%] ) }}"
+               class="ui button"
+               title="View %%modelName%%">
+                <i class="edit icon"></i>
+                </button>
+            </a>
+            {{ Form::open([
+            'method'=>'DELETE',
+            'route' => ['%%routePrefix%%.%%viewName%%.destroy', $%%crudNameSingular%%->%%primaryKey%%],
+            'style' => 'display:inline'
+            ])
+            }}
+            {{ Form::button('<i class="trash icon" aria-hidden="true"></i>', array(
+                    'type' => 'submit',
+                    'class' => 'ui button',
+                    'title' => 'Delete %%modelName%%',
+                    'onclick'=>'return confirm("Confirm delete?")'
+            )) }}
+            {{ Form::close() }}
+
         </div>
+
+    </div>
+
+
+
+    <div class="ui basic segment">
+        <table class="ui table">
+            <tbody>
+            <tr>
+                <td>ID</td>
+                <td>{{ $%%crudNameSingular%%->%%primaryKey%% }}</td>
+            </tr>
+            {{--todo: replace th with td --}}
+            %%formBodyHtmlForShowView%%
+            </tbody>
+        </table>
     </div>
 @endsection

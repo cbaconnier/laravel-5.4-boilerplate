@@ -1,7 +1,15 @@
-<div class="form-group {{ $errors->has('%1$s') ? 'has-error' : ''}}">
-    {!! Form::label('%1$s', %2$s, ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
+{{--<div class="form-group {{ $errors->has('%1$s') ? 'has-error' : ''}}">--}}
+{{--{!! Form::label('%1$s', %2$s, ['class' => 'col-md-4 control-label']) !!}--}}
+{{--<div class="col-md-6">--}}
+{{--%3$s--}}
+{{--{!! $errors->first('%1$s', '<p class="help-block">:message</p>') !!}--}}
+{{--</div>--}}
+{{--</div>--}}
+
+<div class="field {{ $errors->has('%1$s') ? ' error' : '' }}">
+    <label>%1$s</label>
         %3$s
-        {!! $errors->first('%1$s', '<p class="help-block">:message</p>') !!}
-    </div>
+    @if ($errors->has('%1$s'))
+        <div class="ui basic red pointing prompt label transition visible">{{ $errors->first('%1$s') }}</div>
+    @endif
 </div>

@@ -1,42 +1,39 @@
 @extends('admin.layouts.dashboard')
 
 @section('dashboard')
-    <div class="container">
-        <div class="row">
+    <div class="admin-crud-index">
 
-            <div class="col-md-9">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Create New %%modelName%%</div>
-                    <div class="panel-body">
-                        <a href="{{ route('%%routePrefix%%.%%viewName%%.index') }}" title="Back">
-                            <button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i>
-                                Back
-                            </button>
-                        </a>
-                        <br/>
-                        <br/>
+        <div class="ui basic segment">
+            <h1 class="ui header">Create New %%modelName%%</h1>
 
-                        @if ($errors->any())
-                            <ul class="alert alert-danger">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        @endif
 
-                        {!! Form::open([
-                        'route' => ['%%routePrefix%%.%%viewName%%.store'],
-                        'class' => 'form-horizontal',
-                        'files' => true])
-                        !!}
-
-                        @include ('%%viewTemplateDir%%.form')
-
-                        {!! Form::close() !!}
-
-                    </div>
+            <div class="add-button">
+                <div class="ui left floated basic top">
+                    <a href="{{  route('%%routePrefix%%.%%viewName%%.index') }}" class="ui button"
+                       title="Back">
+                        <i class="arrow left icon" aria-hidden="true"></i> Back
+                    </a>
                 </div>
             </div>
+
+        </div>
+
+
+        <div class="segment">
+
+            {{ Form::open([
+            'route' => ['%%routePrefix%%.%%viewName%%.store'],
+            'class' => '',
+            'files' => true])
+            }}
+
+            <div class="ui form">
+                <div class="segment">
+                    @include ('%%viewTemplateDir%%.form', ['submitButtonText' => 'Create'])
+                </div>
+            </div>
+            {{ Form::close() }}
+
         </div>
     </div>
 @endsection
