@@ -4,6 +4,7 @@
 ### Todo:
 
 - add roles with santigarcor/laratrust
+- add users CRUD
 - add middleware for the admin
 - ~~configure appzcoder/crud-generator with semantic-ui~~ ✔
 - add Request validation
