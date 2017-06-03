@@ -13,7 +13,7 @@
 - add jenssegers/date
 - add antonioribeiro/tracker
 - add deployment files configuration
-
+- reset password with semantic-ui
 
 ###  What's in it?
 
