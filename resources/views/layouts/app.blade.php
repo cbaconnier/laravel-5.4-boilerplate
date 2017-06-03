@@ -27,27 +27,35 @@
 
 
     <div class="pusher">
-        <div class="ui container">
-            {{-- Menu header --}}
-            @include('layouts.partials.menu.top')
 
-
-
-            {{-- Page Contents --}}
-            @yield('content')
-
+        <div class="app-header">
+            <div class="ui container">
+                {{-- Menu header --}}
+                @include('layouts.partials.menu.top')
+            </div>
         </div>
 
+        <div class="app-content">
+            <div class="ui container">
+                {{-- Page Contents --}}
+                @yield('content')
+            </div>
+        </div>
 
-        {{-- Footer --}}
-        @include('layouts.partials.menu.footer')
+        <div class="app-footer">
+            {{-- Footer --}}
+            @include('layouts.partials.menu.footer')
+        </div>
+
     </div>
 
 </div>
 
-    {{--Scripts--}}
-    <script src="{{ mix("/js/vendor.js") }}"></script>
-    <script src="{{ mix("/js/main.js") }}"></script>
+
+
+{{--Scripts--}}
+<script src="{{ mix("/js/vendor.js") }}"></script>
+<script src="{{ mix("/js/main.js") }}"></script>
 @yield('scripts')
 
 </body>

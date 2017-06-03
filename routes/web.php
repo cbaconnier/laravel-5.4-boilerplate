@@ -23,10 +23,12 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
     Route::get('invite/create', 'InviteController@create')->name('invite.create');
     Route::post('invite/process', 'InviteController@process')->name('invite.process');
+    Route::resource('users', 'UsersController', ['except' => ['create', 'store']]);
 });
 
 Route::get('invite/{token}', 'Auth\InviteController@accept')->name('invite.accept');
 Route::post('invite/register', 'Auth\InviteController@register')->name('invite.register');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
