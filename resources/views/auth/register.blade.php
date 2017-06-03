@@ -24,14 +24,24 @@
                             {{ Form::hidden('token', $token) }}
                         @endif
 
-                        {{-- Name --}}
+                        {{-- First Name --}}
                         <div class="field">
-                            <div class="ui left icon {{ $errors->has('name') ? ' error' : '' }} input">
+                            <div class="ui left icon {{ $errors->has('first_name') ? ' error' : '' }} input">
                                 <i class="user icon"></i>
-                                <input type="text" name="name" placeholder="Name" value="{{ old('name') }}">
+                                <input type="text" name="first_name" placeholder="First name" value="{{ old('first_name') }}">
                             </div>
-                            @if ($errors->has('name'))
-                                <div class="ui basic red pointing prompt label transition visible">{{ $errors->first('name') }}</div>
+                            @if ($errors->has('first_name'))
+                                <div class="ui basic red pointing prompt label transition visible">{{ $errors->first('first_name') }}</div>
+                            @endif
+                        </div>
+                        {{-- Last Name --}}
+                        <div class="field">
+                            <div class="ui left icon {{ $errors->has('last_name') ? ' error' : '' }} input">
+                                <i class="user icon"></i>
+                                <input type="text" name="last_name" placeholder="Last name" value="{{ old('last_name') }}">
+                            </div>
+                            @if ($errors->has('last_name'))
+                                <div class="ui basic red pointing prompt label transition visible">{{ $errors->first('last_name') }}</div>
                             @endif
                         </div>
 

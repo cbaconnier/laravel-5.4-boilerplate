@@ -21,7 +21,7 @@
             @else
 
                 <div class="ui dropdown item">
-                    {{ Auth::user()->name }} <i class="dropdown icon"></i>
+                    {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}<i class="dropdown icon"></i>
                     <div class="menu">
                         <a class="item">Profile</a>
                         <a href="{{ url('/logout') }}"

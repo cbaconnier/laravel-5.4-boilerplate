@@ -11,7 +11,7 @@
         <div class="ui styled fluid accordion">
             <div class="title">
                 <i class="dropdown icon"></i>
-                {{ Auth::user()->name }}
+                {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
             </div>
             <div class="content">
                 <a class="item">Profile</a>
