@@ -68,3 +68,7 @@ To
         Route::resource('posts', 'PostsController');
 
     });
+
+##### phpDocs for models
+
+ $ php artisan ide-helper:models

@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-debugbar": "^2.3",
         "codesleeve/laravel-stapler": "^1.0",
+        "doctrine/dbal": "^2.5",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
