@@ -26,7 +26,7 @@ module.exports = {
 
 if (process.env.npm_lifecycle_event != 'watch') {
     mix
-        .js(['resources/assets/js/vendor/app.js',
+        .js(['resources/assets/js/vendor/bootstrap.js',
             //'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui.js',
             'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/api.js',
             'node_modules/semantic-ui-sass/app/assets/javascripts/semantic-ui/colorize.js',
